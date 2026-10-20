@@ -1,0 +1,23 @@
+name: Build PDFs
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: typst-community/setup-typst@v4
+      - name: Compile
+        run: |
+          mkdir -p build
+          for f in hw*/main.typ; do
+            d=$(dirname "$f")
+            typst compile --root . "$f" "build/$d.pdf"
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pdfs
+          path: build/*.pdf
