@@ -1,6 +1,6 @@
 // Общий шаблон оформления ДЗ по дискретной математике
 
-#let conf(title: "", author: "", isu: "", group: "", doc) = {
+#let conf(title: "", author: "Сердюков Я. Н.", isu: "561038", group: "M3104", doc) = {
   set page(paper: "a4", margin: (x: 2cm, y: 2cm), numbering: "1")
   set text(lang: "ru", size: 12pt)
   set par(justify: true)
