@@ -10,9 +10,10 @@
 
 ```
 make                                                # собрать все работы в build/
-typst watch --root . hw01/main.typ build/hw01.pdf   # живая пересборка одной работы
+typst watch --root . hwXX/main.typ build/hwXX.pdf   # живая пересборка одной работы
 ```
 
 ## Работы
 
 - [hw01](hw01/main.typ): Множества и логика
+- [hw02](hw02/main.typ)
